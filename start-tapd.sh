@@ -6,7 +6,7 @@ SERVICE_PATH="tapd --network=mainnet \
                   --lnd.host=localhost:10009 \
                   --lnd.macaroonpath=/root/.lnd/data/chain/bitcoin/mainnet/admin.macaroon \
                   --lnd.tlspath=/root/.lnd/tls.cert \
-                  --tapddir=/root/.taprooot-assets \
+                  --tapddir=/root/.taproot-assets \
                   --rpclisten=127.0.0.1:10029 \
                   --restlisten=127.0.0.1:8089"
 PID_FILE="/root/$SERVICE_NAME.pid"
