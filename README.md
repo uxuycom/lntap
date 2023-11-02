@@ -10,7 +10,7 @@ After Docker Build Successfully, you can run the docker image.
 
 Step2:
 ```
-docker run --privileged -it --rm -v ~/lntap:/root uxuy-lntap:latest /bin/sh
+docker run --privileged -it --rm -v ~/lntap:/root lntap:latest /bin/sh
 ```
 or 
 ```
@@ -129,7 +129,7 @@ If you see the balance is not zero, you can start to mint your assets.
 
 ## Mint Token
 ```
-tapcli --network=mainnet --tapddir=/root/.taprooot-assets assets mint \
+tapcli --network=mainnet --tapddir=/root/.taproot-assets assets mint \
  --type normal --name beefbux --supply 100 \
  --meta_bytes "this is your memo" \
   --enable_emission
@@ -139,28 +139,28 @@ You can find it in the taproot asset website or in the community.
 
 ## Finalize Mint
 ```
-tapcli --network=mainnet --tapddir=~/.taprooot-assets assets mint finalize
+tapcli --network=mainnet --tapddir=~/.taproot-assets assets mint finalize
 ```
 
 ## Check the Assets List
 ```
-tapcli --network=mainnet --tapddir=~/.taprooot-assets tapcli assets list
+tapcli --network=mainnet --tapddir=~/.taproot-assets tapcli assets list
 ```
 
 ## Sync Data to Universe
 ```
-tapcli --network=mainnet --tapddir=~/.taprooot-assets universe federation add --universe_host universe.lightning.finance
-tapcli --network=mainnet --tapddir=~/.taprooot-assets u sync --unverse_host universe.lightning.finance
+tapcli --network=mainnet --tapddir=~/.taproot-assets universe federation add --universe_host universe.lightning.finance
+tapcli --network=mainnet --tapddir=~/.taproot-assets u sync --unverse_host universe.lightning.finance
 ```
 ## Receive Assets
 
 ### Generate the receive address
 ```
-tapcli --network=mainnet --tapddir=~/.taprooot-assets addrs new --asset_id ed43c09dd425ec25051c0e467ca1852d624974c503625f38fbb679bbdf89d790 --amt 7
+tapcli --network=mainnet --tapddir=~/.taproot-assets addrs new --asset_id ed43c09dd425ec25051c0e467ca1852d624974c503625f38fbb679bbdf89d790 --amt 7
 ```
 ### Send 
 ```
-tapcli --network=mainnet --tapddir=~/.taprooot-assets assets send --addr tapbc1qqqsqqspqqzzpm2rczwagf0vy5z3crjx0jsc2ttzf96v2qmztuu0hdneh00cn4usq5ss89mey0962l2gjldu8z25gfexxg0dfax5qx9efgntn3spswdhelyeqcss9wam6p2ngmv7rc9j50gt7e2rdsjfeh5wj0rjzx9xhlgglntny6trpqss8vg4vmyczxctwjx6hydyh5sj9jcyuankp444az39vr4kjw8tewwepgqswrpww4hxjan9wfek2unsvvaz7tm4de5hvetjwdjjumrfva58gmnfdenjuenfdeskucm98gcnqvpj8yevw3gx
+tapcli --network=mainnet --tapddir=~/.taproot-assets assets send --addr tapbc1qqqsqqspqqzzpm2rczwagf0vy5z3crjx0jsc2ttzf96v2qmztuu0hdneh00cn4usq5ss89mey0962l2gjldu8z25gfexxg0dfax5qx9efgntn3spswdhelyeqcss9wam6p2ngmv7rc9j50gt7e2rdsjfeh5wj0rjzx9xhlgglntny6trpqss8vg4vmyczxctwjx6hydyh5sj9jcyuankp444az39vr4kjw8tewwepgqswrpww4hxjan9wfek2unsvvaz7tm4de5hvetjwdjjumrfva58gmnfdenjuenfdeskucm98gcnqvpj8yevw3gx
 ```
 
 ### Remember to back up your data 
