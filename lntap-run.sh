@@ -1,1 +1,1 @@
-docker run --privileged -it --rm -v ~/lntap:/root uxuy-lntap:latest /bin/sh
+docker run --privileged -it --rm -v ~/lntap:/root lntap:latest /bin/sh
